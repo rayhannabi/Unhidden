@@ -6,6 +6,8 @@
 //  Copyright © 2017 Oskar Groth. All rights reserved.
 //
 
+//  Used instead CocoaPods
+
 import Cocoa
 import QuartzCore
 
