@@ -37,9 +37,11 @@ class Shell {
         
         process.launch()
         
+        // get output of the terminal process
         let outData = outPipe.fileHandleForReading.readDataToEndOfFile()
         output = String(data: outData, encoding: .utf8)!.components(separatedBy: "\n")
         
+        // get error of the terminal process
         let errorData = errorPipe.fileHandleForReading.readDataToEndOfFile()
         error = String(data: errorData, encoding: .utf8)!.components(separatedBy: "\n")
         
