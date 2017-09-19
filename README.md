@@ -8,4 +8,3 @@ Primarily completed application. Although, further insight is appreciated
 
 Email: rayhanjanam@gmail.com
 Telegram: https://t.me/RayhanJanam
-* Other community or team contact
