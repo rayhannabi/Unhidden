@@ -98,9 +98,6 @@
                                         <menuItem isSeparatorItem="YES" id="hB3-LF-h0Y"/>
                                         <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
                                             <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
-                                            <connections>
-                                                <action selector="toggleSourceList:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
-                                            </connections>
                                         </menuItem>
                                         <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
                                             <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
@@ -358,8 +355,9 @@
                                     <constraint firstItem="boP-tP-rug" firstAttribute="leading" secondItem="e82-0C-sgA" secondAttribute="trailing" constant="33" id="DP9-gC-roO"/>
                                     <constraint firstItem="Xnb-VB-we2" firstAttribute="top" secondItem="jRP-XO-0WP" secondAttribute="top" constant="10" id="Jgx-1S-TFs"/>
                                     <constraint firstItem="e82-0C-sgA" firstAttribute="top" secondItem="Dq9-HE-cV6" secondAttribute="bottom" constant="15" id="QHG-ZV-kef"/>
+                                    <constraint firstAttribute="trailing" secondItem="xou-7h-QGt" secondAttribute="trailing" constant="24" id="QsX-6d-49T"/>
                                     <constraint firstItem="xou-7h-QGt" firstAttribute="top" secondItem="Dq9-HE-cV6" secondAttribute="bottom" constant="30" id="SXl-gW-bDH"/>
-                                    <constraint firstItem="xou-7h-QGt" firstAttribute="leading" secondItem="boP-tP-rug" secondAttribute="trailing" constant="30" id="Sm9-QU-6Bi"/>
+                                    <constraint firstItem="xou-7h-QGt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="boP-tP-rug" secondAttribute="trailing" symbolic="YES" id="Sm9-QU-6Bi"/>
                                     <constraint firstItem="KQp-AM-1h1" firstAttribute="top" secondItem="0ez-oG-Ayw" secondAttribute="bottom" constant="15" id="Taq-bm-zIq"/>
                                     <constraint firstItem="Xnb-VB-we2" firstAttribute="centerX" secondItem="tGT-oX-Nc2" secondAttribute="centerX" id="Xf2-cx-ToM"/>
                                     <constraint firstItem="CXk-lN-tCe" firstAttribute="centerX" secondItem="0ez-oG-Ayw" secondAttribute="centerX" id="Yzb-RX-TSx"/>

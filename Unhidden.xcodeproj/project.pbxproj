@@ -11,6 +11,7 @@
 		E80D0E971F6DC430006A2A6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80D0E961F6DC430006A2A6D /* ViewController.swift */; };
 		E80D0E991F6DC430006A2A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80D0E981F6DC430006A2A6D /* Assets.xcassets */; };
 		E80D0E9C1F6DC430006A2A6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80D0E9A1F6DC430006A2A6D /* Main.storyboard */; };
+		E80EE7BD1F74188100EFE936 /* SwitchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80EE7BC1F74188100EFE936 /* SwitchState.swift */; };
 		E85A23E51F6DD316006D38BC /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85A23E41F6DD316006D38BC /* Shell.swift */; };
 		E85A23E71F6DD362006D38BC /* OGSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85A23E61F6DD362006D38BC /* OGSwitch.swift */; };
 		E85FD89F1F6DF76B009603E6 /* SwitchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85FD89E1F6DF76B009603E6 /* SwitchDelegate.swift */; };
@@ -23,6 +24,7 @@
 		E80D0E981F6DC430006A2A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E80D0E9B1F6DC430006A2A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E80D0E9D1F6DC430006A2A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E80EE7BC1F74188100EFE936 /* SwitchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchState.swift; sourceTree = "<group>"; };
 		E85A23E41F6DD316006D38BC /* Shell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
 		E85A23E61F6DD362006D38BC /* OGSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGSwitch.swift; sourceTree = "<group>"; };
 		E85FD89E1F6DF76B009603E6 /* SwitchDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			children = (
 				E85A23E41F6DD316006D38BC /* Shell.swift */,
 				E85FD89E1F6DF76B009603E6 /* SwitchDelegate.swift */,
+				E80EE7BC1F74188100EFE936 /* SwitchState.swift */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E80D0E971F6DC430006A2A6D /* ViewController.swift in Sources */,
+				E80EE7BD1F74188100EFE936 /* SwitchState.swift in Sources */,
 				E85A23E71F6DD362006D38BC /* OGSwitch.swift in Sources */,
 				E85FD89F1F6DF76B009603E6 /* SwitchDelegate.swift in Sources */,
 				E85A23E51F6DD316006D38BC /* Shell.swift in Sources */,
@@ -243,6 +247,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 			};
 			name = Debug;
 		};
@@ -292,6 +297,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 			};
 			name = Release;
 		};
@@ -307,7 +313,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rayhanjanam.macos.Unhidden;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -324,7 +330,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rayhanjanam.macos.Unhidden;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

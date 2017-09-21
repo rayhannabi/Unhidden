@@ -30,7 +30,6 @@ class ViewController: NSViewController {
         
         toggleButton.delegate = self
         toggleButton.isOn = false
-        // showDialog(withMessage: "Boo")
         
         let statusCheck = Shell(withCommandPath: command, andArguments: readArgs)
         let (output, error, status) = statusCheck.run()
@@ -40,9 +39,9 @@ class ViewController: NSViewController {
             
             switch output[0] {
             case "YES", "Yes", "yes":
-                switchToGreen()
+                setSwitch(toState: .switchOn, withRelaunch: false)
             case "NO", "No", "no":
-                switchToRed()
+                setSwitch(toState: .switchOff, withRelaunch: false)
             default:
                 lblStatus.textColor = NSColor.white
                 lblStatus.stringValue = "N/A"
@@ -56,35 +55,36 @@ class ViewController: NSViewController {
         }
     }
     
-    func switchToRed() {
-        
-        let redOp = Shell(withCommandPath: command, andArguments: writeNoArgs)
-        let (_, error, status) = redOp.run()
-        
-        if status == 0 && error[0] == "" {
-            lblStatus.textColor = NSColor(deviceRed: 255/255, green: 102/255, blue: 102/255, alpha: 1)
-            lblStatus.stringValue = "NO"
-            toggleButton.setOn(isOn: false, animated: true)
-            
-            let (_, _, _) = Shell(withCommandPath: "/usr/bin/killall", andArguments: ["Finder"]).run()
-            
-            print("Hidden off")
-        }
-    }
+    // generic switch function
     
-    func switchToGreen() {
-        
-        let redOp = Shell(withCommandPath: command, andArguments: writeYesArgs)
-        let (_, error, status) = redOp.run()
-        
-        if status == 0 && error[0] == "" {
-            lblStatus.textColor = NSColor(calibratedRed:0.27, green: 0.86, blue: 0.36, alpha: 1.0)
-            lblStatus.stringValue = "YES"
-            toggleButton.setOn(isOn: true, animated: true)
+    func setSwitch(toState state : SwitchState, withRelaunch relaunch: Bool) {
+        switch state {
+        case .switchOn:
+            let redOp = Shell(withCommandPath: command, andArguments: writeYesArgs)
+            let (_, error, status) = redOp.run()
             
+            if status == 0 && error[0] == "" {
+                lblStatus.textColor = NSColor(calibratedRed:0.27, green: 0.86, blue: 0.36, alpha: 1.0)
+                lblStatus.stringValue = "YES"
+                toggleButton.setOn(isOn: true, animated: true)
+                
+                print("Hidden on")
+            }
+        case .switchOff:
+            let redOp = Shell(withCommandPath: command, andArguments: writeNoArgs)
+            let (_, error, status) = redOp.run()
+            
+            if status == 0 && error[0] == "" {
+                lblStatus.textColor = NSColor(deviceRed: 255/255, green: 102/255, blue: 102/255, alpha: 1)
+                lblStatus.stringValue = "NO"
+                toggleButton.setOn(isOn: false, animated: true)
+                                
+                print("Hidden off")
+            }
+        }
+        
+        if relaunch {
             let (_, _, _) = Shell(withCommandPath: "/usr/bin/killall", andArguments: ["Finder"]).run()
-            
-            print("Hidden on")
         }
     }
 }
@@ -93,9 +93,9 @@ extension ViewController: SwitchDelegate {
     func switchToggled() {
         print("Delegate reached")
         if toggleButton.isOn {
-            switchToGreen()
+            setSwitch(toState: .switchOn, withRelaunch: true)
         } else {
-            switchToRed()
+            setSwitch(toState: .switchOff, withRelaunch: true)
         }
     }
 }
