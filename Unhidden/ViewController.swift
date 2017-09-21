@@ -49,12 +49,6 @@ class ViewController: NSViewController {
         }
     }
     
-    override var representedObject: Any? {
-        didSet {
-            
-        }
-    }
-    
     // generic switch function
     
     func setSwitch(toState state : SwitchState, withRelaunch relaunch: Bool) {
