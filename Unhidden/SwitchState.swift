@@ -8,6 +8,8 @@
 
 import Foundation
 
+// OGSwitch State
+
 enum SwitchState {
     case switchOn
     case switchOff
