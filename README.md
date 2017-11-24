@@ -1,10 +1,19 @@
-# README #
+# README
 
-### Contribution guidelines ###
+### Overview
 
-Primarily completed application. Although, further insight is appreciated
+Unhidden is a simple app for macOS to show hidden files and folder in macOS System.
 
-### Who do I talk to? ###
+### How does it work?
 
-Email: rayhanjanam@gmail.com
-Telegram: https://t.me/RayhanJanam
+Well, simple! Launch the app, toggle the switch. All finder windows, if any open, will automatically relaunch. If that does not happen, hold `⌥ (Option)`, `^ (Control)` click **Finder** then select **Relaunch**.
+
+### Contribution
+
+The app is already finished. Nonetheless, further insights and contributions are always appreciated.
+
+### Contact
+
+Send email to **rayhanjanam@gmail.com**
+
+Reach me at telegram **https://t.me/RayhanJanam**
