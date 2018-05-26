@@ -15,6 +15,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var lblStatus: NSTextField!
     @IBOutlet weak var toggleButton: OGSwitch!
     
+    private let onColor = NSColor(calibratedRed: 69/255, green: 220/255, blue: 92/255, alpha: 1.0)
+    private let offColor = NSColor(calibratedRed: 255/255, green: 102/255, blue: 102/255, alpha: 1.0)
+    
     let command: String = "/usr/bin/env"
     let readArgs: [String] = ["defaults", "read", "com.apple.finder", "AppleShowAllFiles"]
     let writeYesArgs: [String] = ["defaults", "write", "com.apple.finder", "AppleShowAllFiles", "Yes"]
@@ -33,10 +36,8 @@ class ViewController: NSViewController {
         
         let statusCheck = Shell(withCommandPath: command, andArguments: readArgs)
         let (output, error, status) = statusCheck.run()
+        
         if status == 0 && error[0] == "" {
-            
-            print(output[0])
-            
             switch output[0] {
             case "YES", "Yes", "yes":
                 setSwitch(toState: .switchOn, withRelaunch: false)
@@ -71,7 +72,7 @@ extension ViewController: SwitchDelegate {
             let (_, error, status) = redOp.run()
             
             if status == 0 && error[0] == "" {
-                lblStatus.textColor = NSColor(calibratedRed:0.27, green: 0.86, blue: 0.36, alpha: 1.0)
+                lblStatus.textColor = onColor
                 lblStatus.stringValue = "YES"
                 toggleButton.setOn(isOn: true, animated: true)
             }
@@ -81,7 +82,7 @@ extension ViewController: SwitchDelegate {
             let (_, error, status) = redOp.run()
             
             if status == 0 && error[0] == "" {
-                lblStatus.textColor = NSColor(deviceRed: 255/255, green: 102/255, blue: 102/255, alpha: 1)
+                lblStatus.textColor = offColor
                 lblStatus.stringValue = "NO"
                 toggleButton.setOn(isOn: false, animated: true)
             }
