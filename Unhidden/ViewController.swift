@@ -48,10 +48,23 @@ class ViewController: NSViewController {
             }
         }
     }
+}
+
+extension ViewController: SwitchDelegate {
     
-    // generic switch function
+    func switchToggled() {
+        
+        if toggleButton.isOn {
+            setSwitch(toState: .switchOn, withRelaunch: true)
+        } else {
+            setSwitch(toState: .switchOff, withRelaunch: true)
+        }
+    }
     
-    func setSwitch(toState state : SwitchState, withRelaunch relaunch: Bool) {
+    // switch function
+    
+    private func setSwitch(toState state : SwitchState, withRelaunch relaunch: Bool) {
+        
         switch state {
         case .switchOn:
             let redOp = Shell(withCommandPath: command, andArguments: writeYesArgs)
@@ -61,9 +74,8 @@ class ViewController: NSViewController {
                 lblStatus.textColor = NSColor(calibratedRed:0.27, green: 0.86, blue: 0.36, alpha: 1.0)
                 lblStatus.stringValue = "YES"
                 toggleButton.setOn(isOn: true, animated: true)
-                
-                print("Hidden on")
             }
+            
         case .switchOff:
             let redOp = Shell(withCommandPath: command, andArguments: writeNoArgs)
             let (_, error, status) = redOp.run()
@@ -72,24 +84,11 @@ class ViewController: NSViewController {
                 lblStatus.textColor = NSColor(deviceRed: 255/255, green: 102/255, blue: 102/255, alpha: 1)
                 lblStatus.stringValue = "NO"
                 toggleButton.setOn(isOn: false, animated: true)
-                                
-                print("Hidden off")
             }
         }
         
         if relaunch {
             let (_, _, _) = Shell(withCommandPath: "/usr/bin/killall", andArguments: ["Finder"]).run()
-        }
-    }
-}
-
-extension ViewController: SwitchDelegate {
-    func switchToggled() {
-        print("Delegate reached")
-        if toggleButton.isOn {
-            setSwitch(toState: .switchOn, withRelaunch: true)
-        } else {
-            setSwitch(toState: .switchOff, withRelaunch: true)
         }
     }
 }
