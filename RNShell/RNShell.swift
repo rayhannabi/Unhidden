@@ -43,13 +43,13 @@ public class RNShell {
   
   // MARK: - Private methods
   
-  func setupProcess() {
+  private func setupProcess() {
     process.launchPath = path
     process.standardOutput = outputPipe
     process.standardError = errorPipe
   }
   
-  func launchProcess() {
+  private func launchProcess() {
     process.launch()
     
     let outputData = outputPipe.fileHandleForReading.readDataToEndOfFile()
