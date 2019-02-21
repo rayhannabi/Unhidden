@@ -21,6 +21,7 @@
 		E89997AF221F38BA007D3AB3 /* RNShell.h in Headers */ = {isa = PBXBuildFile; fileRef = E899979F221F38BA007D3AB3 /* RNShell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E89997B2221F38BA007D3AB3 /* RNShell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E899979D221F38BA007D3AB3 /* RNShell.framework */; };
 		E89997B3221F38BA007D3AB3 /* RNShell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E899979D221F38BA007D3AB3 /* RNShell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E89997BC221F39AE007D3AB3 /* RNShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89997BB221F39AE007D3AB3 /* RNShell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		E89997A5221F38BA007D3AB3 /* RNShellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNShellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89997AC221F38BA007D3AB3 /* RNShellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNShellTests.swift; sourceTree = "<group>"; };
 		E89997AE221F38BA007D3AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E89997BB221F39AE007D3AB3 /* RNShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNShell.swift; sourceTree = "<group>"; };
 		EC5EDABCCF68AAE8B8D86722 /* Pods_Unhidden.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Unhidden.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -195,6 +197,7 @@
 			children = (
 				E899979F221F38BA007D3AB3 /* RNShell.h */,
 				E89997A0221F38BA007D3AB3 /* Info.plist */,
+				E89997BB221F39AE007D3AB3 /* RNShell.swift */,
 			);
 			path = RNShell;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 					E899979C221F38BA007D3AB3 = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = JBR76RZGD2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					E89997A4221F38BA007D3AB3 = {
@@ -443,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E89997BC221F39AE007D3AB3 /* RNShell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +607,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9288C1AA23F53EB4CC724814 /* Pods-Unhidden.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -621,6 +627,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF6607DDBA04B4D4B7D722F5 /* Pods-Unhidden.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -640,6 +647,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -662,6 +670,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rayhannabi.macos.RNShell;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -672,6 +681,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "Mac Developer";
