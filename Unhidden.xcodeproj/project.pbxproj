@@ -412,7 +412,7 @@
 				INFOPLIST_FILE = Unhidden/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rrayhannabi.macos.Unhidden;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rayhannabi.macos.Unhidden;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -431,7 +431,7 @@
 				INFOPLIST_FILE = Unhidden/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rrayhannabi.macos.Unhidden;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rayhannabi.macos.Unhidden;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
