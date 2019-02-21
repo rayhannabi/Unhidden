@@ -16,7 +16,50 @@
 		E85A23E51F6DD316006D38BC /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85A23E41F6DD316006D38BC /* Shell.swift */; };
 		E85A23E71F6DD362006D38BC /* OGSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85A23E61F6DD362006D38BC /* OGSwitch.swift */; };
 		E85FD89F1F6DF76B009603E6 /* SwitchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85FD89E1F6DF76B009603E6 /* SwitchDelegate.swift */; };
+		E89997A6221F38BA007D3AB3 /* RNShell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E899979D221F38BA007D3AB3 /* RNShell.framework */; };
+		E89997AD221F38BA007D3AB3 /* RNShellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89997AC221F38BA007D3AB3 /* RNShellTests.swift */; };
+		E89997AF221F38BA007D3AB3 /* RNShell.h in Headers */ = {isa = PBXBuildFile; fileRef = E899979F221F38BA007D3AB3 /* RNShell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E89997B2221F38BA007D3AB3 /* RNShell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E899979D221F38BA007D3AB3 /* RNShell.framework */; };
+		E89997B3221F38BA007D3AB3 /* RNShell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E899979D221F38BA007D3AB3 /* RNShell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E89997A7221F38BA007D3AB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E80D0E891F6DC430006A2A6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E899979C221F38BA007D3AB3;
+			remoteInfo = RNShell;
+		};
+		E89997A9221F38BA007D3AB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E80D0E891F6DC430006A2A6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E80D0E901F6DC430006A2A6D;
+			remoteInfo = Unhidden;
+		};
+		E89997B0221F38BA007D3AB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E80D0E891F6DC430006A2A6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E899979C221F38BA007D3AB3;
+			remoteInfo = RNShell;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E89997B9221F38BA007D3AB3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E89997B3221F38BA007D3AB3 /* RNShell.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9288C1AA23F53EB4CC724814 /* Pods-Unhidden.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unhidden.debug.xcconfig"; path = "Target Support Files/Pods-Unhidden/Pods-Unhidden.debug.xcconfig"; sourceTree = "<group>"; };
@@ -31,6 +74,12 @@
 		E85A23E41F6DD316006D38BC /* Shell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
 		E85A23E61F6DD362006D38BC /* OGSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGSwitch.swift; sourceTree = "<group>"; };
 		E85FD89E1F6DF76B009603E6 /* SwitchDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchDelegate.swift; sourceTree = "<group>"; };
+		E899979D221F38BA007D3AB3 /* RNShell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RNShell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E899979F221F38BA007D3AB3 /* RNShell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNShell.h; sourceTree = "<group>"; };
+		E89997A0221F38BA007D3AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E89997A5221F38BA007D3AB3 /* RNShellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNShellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E89997AC221F38BA007D3AB3 /* RNShellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNShellTests.swift; sourceTree = "<group>"; };
+		E89997AE221F38BA007D3AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC5EDABCCF68AAE8B8D86722 /* Pods_Unhidden.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Unhidden.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -40,6 +89,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A9205D4976E5D1C48BEF203 /* Pods_Unhidden.framework in Frameworks */,
+				E89997B2221F38BA007D3AB3 /* RNShell.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E899979A221F38BA007D3AB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E89997A2221F38BA007D3AB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E89997A6221F38BA007D3AB3 /* RNShell.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				E80D0E931F6DC430006A2A6D /* Unhidden */,
+				E899979E221F38BA007D3AB3 /* RNShell */,
+				E89997AB221F38BA007D3AB3 /* RNShellTests */,
 				E80D0E921F6DC430006A2A6D /* Products */,
 				7F5B3DFDB322739C2F0712D8 /* Pods */,
 				2E061BE3EFFBC1C17D672060 /* Frameworks */,
@@ -77,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				E80D0E911F6DC430006A2A6D /* Unhidden.app */,
+				E899979D221F38BA007D3AB3 /* RNShell.framework */,
+				E89997A5221F38BA007D3AB3 /* RNShellTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,7 +190,36 @@
 			name = Support;
 			sourceTree = "<group>";
 		};
+		E899979E221F38BA007D3AB3 /* RNShell */ = {
+			isa = PBXGroup;
+			children = (
+				E899979F221F38BA007D3AB3 /* RNShell.h */,
+				E89997A0221F38BA007D3AB3 /* Info.plist */,
+			);
+			path = RNShell;
+			sourceTree = "<group>";
+		};
+		E89997AB221F38BA007D3AB3 /* RNShellTests */ = {
+			isa = PBXGroup;
+			children = (
+				E89997AC221F38BA007D3AB3 /* RNShellTests.swift */,
+				E89997AE221F38BA007D3AB3 /* Info.plist */,
+			);
+			path = RNShellTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E8999798221F38BA007D3AB3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E89997AF221F38BA007D3AB3 /* RNShell.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		E80D0E901F6DC430006A2A6D /* Unhidden */ = {
@@ -134,15 +232,54 @@
 				E80D0E8F1F6DC430006A2A6D /* Resources */,
 				E8517804221F30D500EC05BF /* ShellScript */,
 				FE8B3D9495DCA794101AC6EF /* [CP] Embed Pods Frameworks */,
+				E89997B9221F38BA007D3AB3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E89997B1221F38BA007D3AB3 /* PBXTargetDependency */,
 			);
 			name = Unhidden;
 			productName = Unhidden;
 			productReference = E80D0E911F6DC430006A2A6D /* Unhidden.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E899979C221F38BA007D3AB3 /* RNShell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E89997B8221F38BA007D3AB3 /* Build configuration list for PBXNativeTarget "RNShell" */;
+			buildPhases = (
+				E8999798221F38BA007D3AB3 /* Headers */,
+				E8999799221F38BA007D3AB3 /* Sources */,
+				E899979A221F38BA007D3AB3 /* Frameworks */,
+				E899979B221F38BA007D3AB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNShell;
+			productName = RNShell;
+			productReference = E899979D221F38BA007D3AB3 /* RNShell.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E89997A4221F38BA007D3AB3 /* RNShellTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E89997BA221F38BA007D3AB3 /* Build configuration list for PBXNativeTarget "RNShellTests" */;
+			buildPhases = (
+				E89997A1221F38BA007D3AB3 /* Sources */,
+				E89997A2221F38BA007D3AB3 /* Frameworks */,
+				E89997A3221F38BA007D3AB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E89997A8221F38BA007D3AB3 /* PBXTargetDependency */,
+				E89997AA221F38BA007D3AB3 /* PBXTargetDependency */,
+			);
+			name = RNShellTests;
+			productName = RNShellTests;
+			productReference = E89997A5221F38BA007D3AB3 /* RNShellTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -150,7 +287,7 @@
 		E80D0E891F6DC430006A2A6D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Rayhan;
 				TargetAttributes = {
@@ -164,6 +301,17 @@
 								enabled = 0;
 							};
 						};
+					};
+					E899979C221F38BA007D3AB3 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = JBR76RZGD2;
+						ProvisioningStyle = Automatic;
+					};
+					E89997A4221F38BA007D3AB3 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = JBR76RZGD2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E80D0E901F6DC430006A2A6D;
 					};
 				};
 			};
@@ -181,6 +329,8 @@
 			projectRoot = "";
 			targets = (
 				E80D0E901F6DC430006A2A6D /* Unhidden */,
+				E899979C221F38BA007D3AB3 /* RNShell */,
+				E89997A4221F38BA007D3AB3 /* RNShellTests */,
 			);
 		};
 /* End PBXProject section */
@@ -192,6 +342,20 @@
 			files = (
 				E80D0E991F6DC430006A2A6D /* Assets.xcassets in Resources */,
 				E80D0E9C1F6DC430006A2A6D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E899979B221F38BA007D3AB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E89997A3221F38BA007D3AB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +439,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E8999799221F38BA007D3AB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E89997A1221F38BA007D3AB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E89997AD221F38BA007D3AB3 /* RNShellTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E89997A8221F38BA007D3AB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E899979C221F38BA007D3AB3 /* RNShell */;
+			targetProxy = E89997A7221F38BA007D3AB3 /* PBXContainerItemProxy */;
+		};
+		E89997AA221F38BA007D3AB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E80D0E901F6DC430006A2A6D /* Unhidden */;
+			targetProxy = E89997A9221F38BA007D3AB3 /* PBXContainerItemProxy */;
+		};
+		E89997B1221F38BA007D3AB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E899979C221F38BA007D3AB3 /* RNShell */;
+			targetProxy = E89997B0221F38BA007D3AB3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E80D0E9A1F6DC430006A2A6D /* Main.storyboard */ = {
@@ -439,6 +636,116 @@
 			};
 			name = Release;
 		};
+		E89997B4221F38BA007D3AB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = JBR76RZGD2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = RNShell/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rayhannabi.macos.RNShell;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E89997B5221F38BA007D3AB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = JBR76RZGD2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = RNShell/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rayhannabi.macos.RNShell;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E89997B6221F38BA007D3AB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JBR76RZGD2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = RNShellTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rayhannabi.macos.RNShellTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unhidden.app/Contents/MacOS/Unhidden";
+			};
+			name = Debug;
+		};
+		E89997B7221F38BA007D3AB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JBR76RZGD2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = RNShellTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rayhannabi.macos.RNShellTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unhidden.app/Contents/MacOS/Unhidden";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -456,6 +763,24 @@
 			buildConfigurations = (
 				E80D0EA11F6DC430006A2A6D /* Debug */,
 				E80D0EA21F6DC430006A2A6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E89997B8221F38BA007D3AB3 /* Build configuration list for PBXNativeTarget "RNShell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E89997B4221F38BA007D3AB3 /* Debug */,
+				E89997B5221F38BA007D3AB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E89997BA221F38BA007D3AB3 /* Build configuration list for PBXNativeTarget "RNShellTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E89997B6221F38BA007D3AB3 /* Debug */,
+				E89997B7221F38BA007D3AB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
