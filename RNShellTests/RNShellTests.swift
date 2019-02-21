@@ -15,7 +15,7 @@ class RNShellTests: XCTestCase {
   
   override func setUp() {
     super.setUp()
-    shell = RNShell()
+    shell = RNShell(path: nil)
   }
   
   override func tearDown() {
@@ -24,6 +24,7 @@ class RNShellTests: XCTestCase {
   
   func test_shellInitialized() {
     XCTAssertNotNil(shell, "Shell instance should not be nil")
+    XCTAssertNotEqual(shell.path, "")
   }
   
 }
