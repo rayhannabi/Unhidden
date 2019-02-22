@@ -23,6 +23,7 @@
 		E89997B3221F38BA007D3AB3 /* RNShell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E899979D221F38BA007D3AB3 /* RNShell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E89997BC221F39AE007D3AB3 /* RNShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89997BB221F39AE007D3AB3 /* RNShell.swift */; };
 		E89997BE221F4BF5007D3AB3 /* ShellResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89997BD221F4BF5007D3AB3 /* ShellResult.swift */; };
+		E8A1EF1822204451003B71A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1EF1722204451003B71A5 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		E89997AE221F38BA007D3AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E89997BB221F39AE007D3AB3 /* RNShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNShell.swift; sourceTree = "<group>"; };
 		E89997BD221F4BF5007D3AB3 /* ShellResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellResult.swift; sourceTree = "<group>"; };
+		E8A1EF1722204451003B71A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EC5EDABCCF68AAE8B8D86722 /* Pods_Unhidden.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Unhidden.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -157,7 +159,7 @@
 		E80D0E931F6DC430006A2A6D /* Unhidden */ = {
 			isa = PBXGroup;
 			children = (
-				E85A23E31F6DD303006D38BC /* Support */,
+				E85A23E31F6DD303006D38BC /* Supporting Files */,
 				E85A23E21F6DD2FA006D38BC /* View */,
 				E85A23E11F6DD2F2006D38BC /* Controller */,
 				E80D0E941F6DC430006A2A6D /* AppDelegate.swift */,
@@ -184,14 +186,15 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		E85A23E31F6DD303006D38BC /* Support */ = {
+		E85A23E31F6DD303006D38BC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				E85A23E41F6DD316006D38BC /* Shell.swift */,
 				E85FD89E1F6DF76B009603E6 /* SwitchDelegate.swift */,
 				E80EE7BC1F74188100EFE936 /* SwitchState.swift */,
+				E8A1EF1722204451003B71A5 /* Constants.swift */,
 			);
-			name = Support;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		E899979E221F38BA007D3AB3 /* RNShell */ = {
@@ -442,6 +445,7 @@
 				E80EE7BD1F74188100EFE936 /* SwitchState.swift in Sources */,
 				E85A23E71F6DD362006D38BC /* OGSwitch.swift in Sources */,
 				E85FD89F1F6DF76B009603E6 /* SwitchDelegate.swift in Sources */,
+				E8A1EF1822204451003B71A5 /* Constants.swift in Sources */,
 				E85A23E51F6DD316006D38BC /* Shell.swift in Sources */,
 				E80D0E951F6DC430006A2A6D /* AppDelegate.swift in Sources */,
 			);
