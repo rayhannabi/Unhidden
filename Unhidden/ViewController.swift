@@ -15,9 +15,6 @@ class ViewController: NSViewController {
     @IBOutlet weak var lblStatus: NSTextField!
     @IBOutlet weak var toggleButton: OGSwitch!
     
-    private let onColor = NSColor(calibratedRed: 69/255, green: 220/255, blue: 92/255, alpha: 1.0)
-    private let offColor = NSColor(calibratedRed: 255/255, green: 102/255, blue: 102/255, alpha: 1.0)
-    
     let command: String = "/usr/bin/env"
     let readArgs: [String] = ["defaults", "read", "com.apple.finder", "AppleShowAllFiles"]
     let writeYesArgs: [String] = ["defaults", "write", "com.apple.finder", "AppleShowAllFiles", "Yes"]
@@ -72,7 +69,7 @@ extension ViewController: SwitchDelegate {
             let (_, error, status) = redOp.run()
             
             if status == 0 && error[0] == "" {
-                lblStatus.textColor = onColor
+                lblStatus.textColor = Constants.Colors.switchOn
                 lblStatus.stringValue = "YES"
                 toggleButton.setOn(isOn: true, animated: true)
             }
@@ -82,7 +79,7 @@ extension ViewController: SwitchDelegate {
             let (_, error, status) = redOp.run()
             
             if status == 0 && error[0] == "" {
-                lblStatus.textColor = offColor
+                lblStatus.textColor = Constants.Colors.switchOff
                 lblStatus.stringValue = "NO"
                 toggleButton.setOn(isOn: false, animated: true)
             }

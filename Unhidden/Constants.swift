@@ -15,4 +15,10 @@ struct Constants {
     static var switchOff = NSColor(calibratedRed: 255/255, green: 102/255, blue: 102/255, alpha: 1.0)
   }
   
+  struct Commands {
+    static var read = "defaults read com.apple.finder AppleShowAllFiles"
+    static var writeYes = "defaults write com.apple.finder AppleShowAllFiles Yes"
+    static var writeNo = "defaults write com.apple.finder AppleShowAllFiles No"
+  }
+  
 }
