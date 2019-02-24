@@ -60,7 +60,23 @@ class ViewController: NSViewController {
   }
   
   fileprivate func checkCurrentStatus() {
+    let shellForStatus = RNShell()
+    let result = shellForStatus.run(command: Constants.Commands.read)
     
+    guard let output = result.firstLineOfOutput else {
+      lblStatus.textColor = NSColor.white
+      lblStatus.stringValue = "N/A"
+      return
+    }
+    
+    switch output {
+    case "YES", "Yes", "yes":
+      setSwitch(toState: .switchOn, withRelaunch: false)
+    case "NO", "No", "no":
+      setSwitch(toState: .switchOff, withRelaunch: false)
+    default:
+      return
+    }
   }
   
 }
@@ -108,13 +124,4 @@ extension ViewController: SwitchDelegate {
       let (_, _, _) = Shell(withCommandPath: "/usr/bin/killall", andArguments: ["Finder"]).run()
     }
   }
-}
-
-// MARK: - RNShellDelegate
-extension ViewController: RNShellDelegate {
-  
-  func didFinishRunning(_ shell: RNShell, result: ShellResult) {
-    
-  }
-  
 }

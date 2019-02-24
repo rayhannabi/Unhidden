@@ -10,19 +10,19 @@ import Foundation
 
 public struct ShellResult {
   
-  let outputs: [String]?
-  let errors: [String]?
-  let status: Int
+  public let outputs: [String]?
+  public let errors: [String]?
+  public let status: Int
   
-  var firstLineOfOutput: String? {
+  public var firstLineOfOutput: String? {
     return outputs?.first
   }
   
-  var firstLineOfError: String? {
+  public var firstLineOfError: String? {
     return errors?.first
   }
   
-  init(outputs: [String]?, errors: [String]?, status: Int) {
+  public init(outputs: [String]?, errors: [String]?, status: Int) {
     self.outputs = outputs
     self.errors = errors
     self.status = status

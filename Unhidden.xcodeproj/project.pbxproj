@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9A9205D4976E5D1C48BEF203 /* Pods_Unhidden.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5EDABCCF68AAE8B8D86722 /* Pods_Unhidden.framework */; };
 		E80D0E951F6DC430006A2A6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80D0E941F6DC430006A2A6D /* AppDelegate.swift */; };
-		E80D0E971F6DC430006A2A6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80D0E961F6DC430006A2A6D /* ViewController.swift */; };
+		E80D0E971F6DC430006A2A6D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80D0E961F6DC430006A2A6D /* MainViewController.swift */; };
 		E80D0E991F6DC430006A2A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80D0E981F6DC430006A2A6D /* Assets.xcassets */; };
 		E80D0E9C1F6DC430006A2A6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80D0E9A1F6DC430006A2A6D /* Main.storyboard */; };
 		E80EE7BD1F74188100EFE936 /* SwitchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80EE7BC1F74188100EFE936 /* SwitchState.swift */; };
@@ -24,6 +24,8 @@
 		E89997BC221F39AE007D3AB3 /* RNShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89997BB221F39AE007D3AB3 /* RNShell.swift */; };
 		E89997BE221F4BF5007D3AB3 /* ShellResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89997BD221F4BF5007D3AB3 /* ShellResult.swift */; };
 		E8A1EF1822204451003B71A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1EF1722204451003B71A5 /* Constants.swift */; };
+		E8CE15022222EADC000EFE71 /* OGSwitchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE15012222EADC000EFE71 /* OGSwitchDelegate.swift */; };
+		E8CE15042222EAEB000EFE71 /* OGSwitchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE15032222EAEB000EFE71 /* OGSwitchState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +71,7 @@
 		BF6607DDBA04B4D4B7D722F5 /* Pods-Unhidden.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unhidden.release.xcconfig"; path = "Target Support Files/Pods-Unhidden/Pods-Unhidden.release.xcconfig"; sourceTree = "<group>"; };
 		E80D0E911F6DC430006A2A6D /* Unhidden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unhidden.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80D0E941F6DC430006A2A6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E80D0E961F6DC430006A2A6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E80D0E961F6DC430006A2A6D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E80D0E981F6DC430006A2A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E80D0E9B1F6DC430006A2A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E80D0E9D1F6DC430006A2A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +88,8 @@
 		E89997BB221F39AE007D3AB3 /* RNShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNShell.swift; sourceTree = "<group>"; };
 		E89997BD221F4BF5007D3AB3 /* ShellResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellResult.swift; sourceTree = "<group>"; };
 		E8A1EF1722204451003B71A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E8CE15012222EADC000EFE71 /* OGSwitchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OGSwitchDelegate.swift; sourceTree = "<group>"; };
+		E8CE15032222EAEB000EFE71 /* OGSwitchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OGSwitchState.swift; sourceTree = "<group>"; };
 		EC5EDABCCF68AAE8B8D86722 /* Pods_Unhidden.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Unhidden.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -173,7 +177,7 @@
 		E85A23E11F6DD2F2006D38BC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E80D0E961F6DC430006A2A6D /* ViewController.swift */,
+				E80D0E961F6DC430006A2A6D /* MainViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -181,7 +185,7 @@
 		E85A23E21F6DD2FA006D38BC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E85A23E61F6DD362006D38BC /* OGSwitch.swift */,
+				E8CE15002222EAC5000EFE71 /* OGSwitch */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -215,6 +219,16 @@
 				E89997AE221F38BA007D3AB3 /* Info.plist */,
 			);
 			path = RNShellTests;
+			sourceTree = "<group>";
+		};
+		E8CE15002222EAC5000EFE71 /* OGSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				E85A23E61F6DD362006D38BC /* OGSwitch.swift */,
+				E8CE15012222EADC000EFE71 /* OGSwitchDelegate.swift */,
+				E8CE15032222EAEB000EFE71 /* OGSwitchState.swift */,
+			);
+			name = OGSwitch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,10 +455,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E80D0E971F6DC430006A2A6D /* ViewController.swift in Sources */,
+				E80D0E971F6DC430006A2A6D /* MainViewController.swift in Sources */,
 				E80EE7BD1F74188100EFE936 /* SwitchState.swift in Sources */,
+				E8CE15042222EAEB000EFE71 /* OGSwitchState.swift in Sources */,
 				E85A23E71F6DD362006D38BC /* OGSwitch.swift in Sources */,
 				E85FD89F1F6DF76B009603E6 /* SwitchDelegate.swift in Sources */,
+				E8CE15022222EADC000EFE71 /* OGSwitchDelegate.swift in Sources */,
 				E8A1EF1822204451003B71A5 /* Constants.swift in Sources */,
 				E85A23E51F6DD316006D38BC /* Shell.swift in Sources */,
 				E80D0E951F6DC430006A2A6D /* AppDelegate.swift in Sources */,
