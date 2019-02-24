@@ -19,6 +19,8 @@ struct Constants {
     static var read = "defaults read com.apple.finder AppleShowAllFiles"
     static var writeYes = "defaults write com.apple.finder AppleShowAllFiles Yes"
     static var writeNo = "defaults write com.apple.finder AppleShowAllFiles No"
+    static var killallPath = "/usr/bin/killall"
+    static var finder = "Finder"
   }
   
 }

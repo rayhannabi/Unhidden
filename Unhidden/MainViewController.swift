@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Unhidden
 //
 //  Created by Rayhan on 9/17/17.
@@ -9,7 +9,7 @@
 import Cocoa
 import RNShell
 
-class ViewController: NSViewController {
+class MainViewController: NSViewController {
   
   lazy var window: NSWindow! = self.view.window
   
@@ -31,8 +31,7 @@ class ViewController: NSViewController {
     
     toggleButton.delegate = self
     toggleButton.isOn = false
-    
-    checkCurrentStatusOld()
+    checkCurrentStatus()
   }
   
   override func viewWillAppear() {
@@ -41,23 +40,6 @@ class ViewController: NSViewController {
   }
   
   // MARK: - Private methods
-  // TODO: - Remove when obsolete
-  fileprivate func checkCurrentStatusOld() {
-    let statusCheck = Shell(withCommandPath: command, andArguments: readArgs)
-    let (output, error, status) = statusCheck.run()
-    
-    if status == 0 && error[0] == "" {
-      switch output[0] {
-      case "YES", "Yes", "yes":
-        setSwitch(toState: .switchOn, withRelaunch: false)
-      case "NO", "No", "no":
-        setSwitch(toState: .switchOff, withRelaunch: false)
-      default:
-        lblStatus.textColor = NSColor.white
-        lblStatus.stringValue = "N/A"
-      }
-    }
-  }
   
   fileprivate func checkCurrentStatus() {
     let shellForStatus = RNShell()
@@ -68,22 +50,67 @@ class ViewController: NSViewController {
       lblStatus.stringValue = "N/A"
       return
     }
-    
+    print(output)
     switch output {
     case "YES", "Yes", "yes":
-      setSwitch(toState: .switchOn, withRelaunch: false)
+      setSwitchOn()
     case "NO", "No", "no":
-      setSwitch(toState: .switchOff, withRelaunch: false)
+      setSwitchOff()
     default:
       return
     }
+  }
+  
+  fileprivate func setSwitch(to state: OGSwitchState) {
+    switch state {
+    case .on:
+      lblStatus.textColor = Constants.Colors.switchOn
+      lblStatus.stringValue = "YES"
+      toggleButton.setOn(isOn: true, animated: true)
+    case .off:
+      lblStatus.textColor = Constants.Colors.switchOff
+      lblStatus.stringValue = "NO"
+      toggleButton.setOn(isOn: false, animated: true)
+    }
+  }
+  
+  fileprivate func setHiddenFileSettings(value: Bool) -> Bool {
+    let shell = RNShell()
+    let command = value ? Constants.Commands.writeYes : Constants.Commands.writeNo
+    let result = shell.run(command: command)
+    
+    if result.firstLineOfError != nil &&
+      result.status != 0 {
+      return false
+    }
+    
+    return true
+  }
+  
+  fileprivate func setSwitchOn() {
+    let success = setHiddenFileSettings(value: true)
+    if success {
+      setSwitch(to: .on)
+    }
+  }
+  
+  fileprivate func setSwitchOff() {
+    let success = setHiddenFileSettings(value: false)
+    if success {
+      setSwitch(to: .off)
+    }
+  }
+  
+  fileprivate func relaunchFinder() {
+    let shell = RNShell(path: Constants.Commands.killallPath)
+    shell.run(command: Constants.Commands.finder)
   }
   
 }
 
 // MARK: - SwitchDelegate
 
-extension ViewController: SwitchDelegate {
+extension MainViewController: SwitchDelegate {
   
   func switchToggled() {
     
@@ -124,4 +151,23 @@ extension ViewController: SwitchDelegate {
       let (_, _, _) = Shell(withCommandPath: "/usr/bin/killall", andArguments: ["Finder"]).run()
     }
   }
+  
+}
+
+// MARK: - OGSwitchDelegate
+
+extension MainViewController: OGSwitchDelegate {
+  
+  // FIXME: - Update relaunch
+  func didToggle(_ switch: OGSwitch) {
+    switch toggleButton.isOn {
+    case true:
+      setSwitchOff()
+      relaunchFinder()
+    case false:
+      setSwitchOn()
+      relaunchFinder()
+    }
+  }
+  
 }

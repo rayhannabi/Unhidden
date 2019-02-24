@@ -15,11 +15,11 @@ public struct ShellResult {
   public let status: Int
   
   public var firstLineOfOutput: String? {
-    return outputs?.first
+    return outputs?.first != "" ? outputs?.first : nil
   }
   
   public var firstLineOfError: String? {
-    return errors?.first
+    return errors?.first != "" ? errors?.first : nil
   }
   
   public init(outputs: [String]?, errors: [String]?, status: Int) {

@@ -62,7 +62,7 @@ public class RNShell {
   }
   
   // MARK: - Public instance methods
-  
+  @discardableResult
   public func run(command: String) -> ShellResult {
     self.command = command
     
