@@ -13,8 +13,8 @@ class MainViewController: NSViewController {
   
   lazy var window: NSWindow! = self.view.window
   
+  @IBOutlet weak var statusField: NSTextField!
   @IBOutlet weak var settingsSwitch: OGSwitch!
-
   
   // MARK: - Life cycle Methods
   
@@ -55,8 +55,10 @@ class MainViewController: NSViewController {
     switch state {
     case .on:
       settingsSwitch.setOn(isOn: true, animated: true)
+      statusField.stringValue = Constants.Strings.hiddenFileOn.rawValue
     case .off:
       settingsSwitch.setOn(isOn: false, animated: true)
+      statusField.stringValue = Constants.Strings.hiddenFileOff.rawValue
     }
   }
   

@@ -23,4 +23,9 @@ struct Constants {
     static var finder = "Finder"
   }
   
+  enum Strings: String {
+    case hiddenFileOn = "Hidden files are not shown"
+    case hiddenFileOff = "Hidden files are visible now"
+  }
+  
 }
