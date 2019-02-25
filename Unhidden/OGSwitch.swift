@@ -315,11 +315,8 @@ public class OGSwitch : NSView {
     
     reloadLayer()
     delegate?.didToggle(self)
-    // FIXME: - remove comment
-    //        delegate?.switchToggled()
   }
   
-  //    var delegate: SwitchDelegate?
   var delegate: OGSwitchDelegate?
 }
 

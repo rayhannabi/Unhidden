@@ -15,14 +15,7 @@ class MainViewController: NSViewController {
   
   @IBOutlet weak var lblStatus: NSTextField!
   @IBOutlet weak var toggleButton: OGSwitch!
-  
-  private let onColor = NSColor(calibratedRed: 69/255, green: 220/255, blue: 92/255, alpha: 1.0)
-  private let offColor = NSColor(calibratedRed: 255/255, green: 102/255, blue: 102/255, alpha: 1.0)
-  
-  let command: String = "/usr/bin/env"
-  let readArgs: [String] = ["defaults", "read", "com.apple.finder", "AppleShowAllFiles"]
-  let writeYesArgs: [String] = ["defaults", "write", "com.apple.finder", "AppleShowAllFiles", "Yes"]
-  let writeNoArgs: [String] = ["defaults", "write", "com.apple.finder", "AppleShowAllFiles", "No"]
+
   
   // MARK: - Life cycle Methods
   
@@ -108,64 +101,21 @@ class MainViewController: NSViewController {
   
 }
 
-// MARK: - SwitchDelegate
-
-extension MainViewController: SwitchDelegate {
-  
-  func switchToggled() {
-    
-    if toggleButton.isOn {
-      setSwitch(toState: .switchOn, withRelaunch: true)
-    } else {
-      setSwitch(toState: .switchOff, withRelaunch: true)
-    }
-  }
-  
-  // switch function
-  
-  private func setSwitch(toState state : SwitchState, withRelaunch relaunch: Bool) {
-    
-    switch state {
-    case .switchOn:
-      let redOp = Shell(withCommandPath: command, andArguments: writeYesArgs)
-      let (_, error, status) = redOp.run()
-      
-      if status == 0 && error[0] == "" {
-        lblStatus.textColor = onColor
-        lblStatus.stringValue = "YES"
-        toggleButton.setOn(isOn: true, animated: true)
-      }
-      
-    case .switchOff:
-      let redOp = Shell(withCommandPath: command, andArguments: writeNoArgs)
-      let (_, error, status) = redOp.run()
-      
-      if status == 0 && error[0] == "" {
-        lblStatus.textColor = offColor
-        lblStatus.stringValue = "NO"
-        toggleButton.setOn(isOn: false, animated: true)
-      }
-    }
-    
-    if relaunch {
-      let (_, _, _) = Shell(withCommandPath: "/usr/bin/killall", andArguments: ["Finder"]).run()
-    }
-  }
-  
-}
-
 // MARK: - OGSwitchDelegate
 
 extension MainViewController: OGSwitchDelegate {
   
-  // FIXME: - Update relaunch
   func didToggle(_ switch: OGSwitch) {
     switch toggleButton.isOn {
     case true:
-      setSwitchOff()
-      relaunchFinder()
+      toggleSettings(to: true)
     case false:
-      setSwitchOn()
+      toggleSettings(to: false)
+    }
+  }
+  
+  fileprivate func toggleSettings(to value: Bool) {
+    if setHiddenFileSettings(value: value) {
       relaunchFinder()
     }
   }
