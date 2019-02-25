@@ -8,10 +8,6 @@
 
 import Cocoa
 
-public protocol RNShellDelegate: AnyObject {
-  func didFinishRunning(_ shell: RNShell, result: ShellResult)
-}
-
 public class RNShell {
   
   private let defaultPath = "/usr/bin/env"
@@ -20,13 +16,12 @@ public class RNShell {
   private let outputPipe:     Pipe
   private let errorPipe:      Pipe
   
-  weak var delegate:          RNShellDelegate?
   private(set) var command:   String
   private(set) var path:      String
   
   // MARK: - Initializer
   
-  init(path: String? = nil) {
+  public init(path: String? = nil) {
     self.command = ""
     self.process = Process()
     self.outputPipe = Pipe()
@@ -49,7 +44,7 @@ public class RNShell {
     process.standardError = errorPipe
   }
   
-  private func launchProcess() {
+  private func launchProcess() -> ShellResult {
     process.launch()
     
     let outputData = outputPipe.fileHandleForReading.readDataToEndOfFile()
@@ -63,21 +58,18 @@ public class RNShell {
     let shellResult = ShellResult(outputs: outputResult,
                                   errors: errorResult,
                                   status: Int(process.terminationStatus))
-    
-    delegate?.didFinishRunning(self, result: shellResult)
+    return shellResult
   }
   
   // MARK: - Public instance methods
-  
-  func run(command: String) {
+  @discardableResult
+  public func run(command: String) -> ShellResult {
     self.command = command
     
     let arguments = command.components(separatedBy: .whitespaces)
     process.arguments = arguments
     
-    DispatchQueue.main.async {
-      self.launchProcess()
-    }
+    return launchProcess()
   }
   
 }
