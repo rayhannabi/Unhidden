@@ -13,8 +13,7 @@ class MainViewController: NSViewController {
   
   lazy var window: NSWindow! = self.view.window
   
-  @IBOutlet weak var lblStatus: NSTextField!
-  @IBOutlet weak var toggleButton: OGSwitch!
+  @IBOutlet weak var settingsSwitch: OGSwitch!
 
   
   // MARK: - Life cycle Methods
@@ -22,8 +21,8 @@ class MainViewController: NSViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    toggleButton.delegate = self
-    toggleButton.isOn = false
+    settingsSwitch.delegate = self
+    settingsSwitch.isOn = false
     checkCurrentStatus()
   }
   
@@ -39,8 +38,6 @@ class MainViewController: NSViewController {
     let result = shellForStatus.run(command: Constants.Commands.read)
     
     guard let output = result.firstLineOfOutput else {
-      lblStatus.textColor = NSColor.white
-      lblStatus.stringValue = "N/A"
       return
     }
     print(output)
@@ -57,13 +54,9 @@ class MainViewController: NSViewController {
   fileprivate func setSwitch(to state: OGSwitchState) {
     switch state {
     case .on:
-      lblStatus.textColor = Constants.Colors.switchOn
-      lblStatus.stringValue = "YES"
-      toggleButton.setOn(isOn: true, animated: true)
+      settingsSwitch.setOn(isOn: true, animated: true)
     case .off:
-      lblStatus.textColor = Constants.Colors.switchOff
-      lblStatus.stringValue = "NO"
-      toggleButton.setOn(isOn: false, animated: true)
+      settingsSwitch.setOn(isOn: false, animated: true)
     }
   }
   
@@ -106,7 +99,7 @@ class MainViewController: NSViewController {
 extension MainViewController: OGSwitchDelegate {
   
   func didToggle(_ switch: OGSwitch) {
-    switch toggleButton.isOn {
+    switch settingsSwitch.isOn {
     case true:
       toggleSettings(to: true)
     case false:
