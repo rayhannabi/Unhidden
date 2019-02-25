@@ -44,6 +44,7 @@
 		E8EE9FD0222451720056932A /* Metropolis-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E8EE9FBE222451720056932A /* Metropolis-ThinItalic.otf */; };
 		E8EE9FD1222451720056932A /* Metropolis-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E8EE9FBF222451720056932A /* Metropolis-SemiBoldItalic.otf */; };
 		E8EE9FD2222451720056932A /* Metropolis-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E8EE9FC0222451720056932A /* Metropolis-Light.otf */; };
+		E8EE9FD6222454250056932A /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE9FD5222454250056932A /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		E8EE9FBE222451720056932A /* Metropolis-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ThinItalic.otf"; sourceTree = "<group>"; };
 		E8EE9FBF222451720056932A /* Metropolis-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-SemiBoldItalic.otf"; sourceTree = "<group>"; };
 		E8EE9FC0222451720056932A /* Metropolis-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Light.otf"; sourceTree = "<group>"; };
+		E8EE9FD5222454250056932A /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		EC5EDABCCF68AAE8B8D86722 /* Pods_Unhidden.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Unhidden.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -305,6 +307,7 @@
 		E8EE9FD4222451930056932A /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				E8EE9FD5222454250056932A /* Fonts.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				E85A23E71F6DD362006D38BC /* OGSwitch.swift in Sources */,
 				E85FD89F1F6DF76B009603E6 /* SwitchDelegate.swift in Sources */,
 				E8CE15022222EADC000EFE71 /* OGSwitchDelegate.swift in Sources */,
+				E8EE9FD6222454250056932A /* Fonts.swift in Sources */,
 				E8A1EF1822204451003B71A5 /* Constants.swift in Sources */,
 				E85A23E51F6DD316006D38BC /* Shell.swift in Sources */,
 				E80D0E951F6DC430006A2A6D /* AppDelegate.swift in Sources */,
