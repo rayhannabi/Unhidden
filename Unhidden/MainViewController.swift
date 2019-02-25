@@ -40,7 +40,7 @@ class MainViewController: NSViewController {
     guard let output = result.firstLineOfOutput else {
       return
     }
-    print(output)
+    
     switch output {
     case "YES", "Yes", "yes":
       setSwitchOn()
