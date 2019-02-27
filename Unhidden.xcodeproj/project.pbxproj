@@ -12,10 +12,7 @@
 		E80D0E971F6DC430006A2A6D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80D0E961F6DC430006A2A6D /* MainViewController.swift */; };
 		E80D0E991F6DC430006A2A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80D0E981F6DC430006A2A6D /* Assets.xcassets */; };
 		E80D0E9C1F6DC430006A2A6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80D0E9A1F6DC430006A2A6D /* Main.storyboard */; };
-		E80EE7BD1F74188100EFE936 /* SwitchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80EE7BC1F74188100EFE936 /* SwitchState.swift */; };
-		E85A23E51F6DD316006D38BC /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85A23E41F6DD316006D38BC /* Shell.swift */; };
 		E85A23E71F6DD362006D38BC /* OGSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85A23E61F6DD362006D38BC /* OGSwitch.swift */; };
-		E85FD89F1F6DF76B009603E6 /* SwitchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85FD89E1F6DF76B009603E6 /* SwitchDelegate.swift */; };
 		E89997A6221F38BA007D3AB3 /* RNShell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E899979D221F38BA007D3AB3 /* RNShell.framework */; };
 		E89997AD221F38BA007D3AB3 /* RNShellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89997AC221F38BA007D3AB3 /* RNShellTests.swift */; };
 		E89997AF221F38BA007D3AB3 /* RNShell.h in Headers */ = {isa = PBXBuildFile; fileRef = E899979F221F38BA007D3AB3 /* RNShell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -94,10 +91,7 @@
 		E80D0E981F6DC430006A2A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E80D0E9B1F6DC430006A2A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E80D0E9D1F6DC430006A2A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E80EE7BC1F74188100EFE936 /* SwitchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchState.swift; sourceTree = "<group>"; };
-		E85A23E41F6DD316006D38BC /* Shell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
 		E85A23E61F6DD362006D38BC /* OGSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGSwitch.swift; sourceTree = "<group>"; };
-		E85FD89E1F6DF76B009603E6 /* SwitchDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchDelegate.swift; sourceTree = "<group>"; };
 		E899979D221F38BA007D3AB3 /* RNShell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RNShell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E899979F221F38BA007D3AB3 /* RNShell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNShell.h; sourceTree = "<group>"; };
 		E89997A0221F38BA007D3AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -233,9 +227,6 @@
 		E85A23E31F6DD303006D38BC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E85A23E41F6DD316006D38BC /* Shell.swift */,
-				E85FD89E1F6DF76B009603E6 /* SwitchDelegate.swift */,
-				E80EE7BC1F74188100EFE936 /* SwitchState.swift */,
 				E8A1EF1722204451003B71A5 /* Constants.swift */,
 			);
 			name = "Supporting Files";
@@ -555,14 +546,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E80D0E971F6DC430006A2A6D /* MainViewController.swift in Sources */,
-				E80EE7BD1F74188100EFE936 /* SwitchState.swift in Sources */,
 				E8CE15042222EAEB000EFE71 /* OGSwitchState.swift in Sources */,
 				E85A23E71F6DD362006D38BC /* OGSwitch.swift in Sources */,
-				E85FD89F1F6DF76B009603E6 /* SwitchDelegate.swift in Sources */,
 				E8CE15022222EADC000EFE71 /* OGSwitchDelegate.swift in Sources */,
 				E8EE9FD6222454250056932A /* Fonts.swift in Sources */,
 				E8A1EF1822204451003B71A5 /* Constants.swift in Sources */,
-				E85A23E51F6DD316006D38BC /* Shell.swift in Sources */,
 				E80D0E951F6DC430006A2A6D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
