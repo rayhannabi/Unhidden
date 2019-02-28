@@ -8,13 +8,17 @@
 
 import Cocoa
 import RNShell
+import Lottie
 
 class MainViewController: NSViewController {
   
   lazy var window: NSWindow! = self.view.window
   
+  @IBOutlet weak var lottieAnimationContainer: NSView!
   @IBOutlet weak var statusField: NSTextField!
   @IBOutlet weak var settingsSwitch: OGSwitch!
+  
+  private var eyeAnimationView: LOTAnimationView!
   
   // MARK: - Life cycle Methods
   
@@ -23,15 +27,24 @@ class MainViewController: NSViewController {
     
     settingsSwitch.delegate = self
     settingsSwitch.isOn = false
+    setupEyeAnimation()
     checkCurrentStatus()
   }
   
   override func viewWillAppear() {
+    super.viewWillAppear()
+    
     window.titlebarAppearsTransparent = true
     window.titleVisibility = .hidden
   }
   
   // MARK: - Private methods
+  
+  fileprivate func setupEyeAnimation() {
+    eyeAnimationView = LOTAnimationView(name: "eye", bundle: Bundle.main)
+    eyeAnimationView.frame = lottieAnimationContainer.bounds
+    lottieAnimationContainer.addSubview(eyeAnimationView)
+  }
   
   fileprivate func checkCurrentStatus() {
     let shellForStatus = RNShell()
@@ -46,6 +59,7 @@ class MainViewController: NSViewController {
       setSwitchOn()
     case "NO", "No", "no":
       setSwitchOff()
+      setEye(false)
     default:
       return
     }
@@ -106,6 +120,21 @@ class MainViewController: NSViewController {
     shell.run(command: Constants.Commands.finder)
   }
   
+  fileprivate func setEye(_ value: Bool) {
+    let to: CGFloat = value ? 0 : 0.5
+    let from: CGFloat = value ? 0.5 : 0
+    eyeAnimationView.play(fromProgress: from, toProgress: to, withCompletion: nil)
+  }
+  
+  fileprivate func toggleSettings(to value: Bool) {
+    if setHiddenFileSettings(value: value) {
+      setStatus(to: value)
+      setEye(value)
+      relaunchFinder()
+    }
+  }
+  
+  
 }
 
 // MARK: - OGSwitchDelegate
@@ -120,12 +149,4 @@ extension MainViewController: OGSwitchDelegate {
       toggleSettings(to: false)
     }
   }
-  
-  fileprivate func toggleSettings(to value: Bool) {
-    if setHiddenFileSettings(value: value) {
-      setStatus(to: value)
-      relaunchFinder()
-    }
-  }
-  
 }
