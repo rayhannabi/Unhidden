@@ -211,9 +211,9 @@
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kbi-ke-liW">
-                                                <rect key="frame" x="73" y="176" width="195" height="19"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Hidden files are not shown" id="hbJ-gh-6Mg">
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbi-ke-liW">
+                                                <rect key="frame" x="-2" y="176" width="344" height="19"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" allowsUndo="NO" alignment="center" title="Hidden files are not shown" id="hbJ-gh-6Mg">
                                                     <font key="font" size="15" name="Metropolis-Regular"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -226,7 +226,8 @@
                                             <constraint firstItem="R1D-H8-wip" firstAttribute="top" secondItem="jRP-XO-0WP" secondAttribute="top" constant="64" id="0nL-4j-gmP"/>
                                             <constraint firstItem="0ez-oG-Ayw" firstAttribute="width" secondItem="jRP-XO-0WP" secondAttribute="width" multiplier="0.6" id="QaG-zO-UfD"/>
                                             <constraint firstAttribute="bottom" secondItem="0ez-oG-Ayw" secondAttribute="bottom" constant="44" id="bva-JB-4Tq"/>
-                                            <constraint firstItem="0ez-oG-Ayw" firstAttribute="centerX" secondItem="kbi-ke-liW" secondAttribute="centerX" id="pK4-96-cN9"/>
+                                            <constraint firstItem="kbi-ke-liW" firstAttribute="leading" secondItem="jRP-XO-0WP" secondAttribute="leading" id="fFE-D1-lZK"/>
+                                            <constraint firstAttribute="trailing" secondItem="kbi-ke-liW" secondAttribute="trailing" id="rUx-Ab-9rp"/>
                                             <constraint firstItem="0ez-oG-Ayw" firstAttribute="top" secondItem="kbi-ke-liW" secondAttribute="bottom" constant="32" id="xCX-IE-zNG"/>
                                             <constraint firstItem="R1D-H8-wip" firstAttribute="width" secondItem="jRP-XO-0WP" secondAttribute="width" id="y4m-jd-SDy"/>
                                         </constraints>

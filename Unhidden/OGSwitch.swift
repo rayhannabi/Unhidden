@@ -126,7 +126,7 @@ public class OGSwitch : NSView {
     animation.fromValue = iconLayer.contents
     animation.duration = 0.5
     animation.isRemovedOnCompletion = false
-    animation.fillMode = kCAFillModeForwards
+    animation.fillMode = CAMediaTimingFillMode.forwards
     iconLayer.add(animation, forKey: "contents")
     iconLayer.setValue(animation.toValue, forKey: "contents")
   }

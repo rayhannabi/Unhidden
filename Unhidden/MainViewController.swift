@@ -55,10 +55,10 @@ class MainViewController: NSViewController {
     switch state {
     case .on:
       settingsSwitch.setOn(isOn: true, animated: true)
-      statusField.stringValue = Strings.hiddenFileOn
+      setStatus(to: true)
     case .off:
       settingsSwitch.setOn(isOn: false, animated: true)
-      statusField.stringValue = Strings.hiddenFileOff
+      setStatus(to: false)
     }
   }
   
@@ -89,6 +89,18 @@ class MainViewController: NSViewController {
     }
   }
   
+  fileprivate func setStatus(to value: Bool) {
+    let transition = CATransition()
+    transition.isRemovedOnCompletion = true
+    transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+    transition.type = CATransitionType.push
+    transition.subtype = value ? CATransitionSubtype.fromLeft : CATransitionSubtype.fromRight
+    transition.duration = 0.5
+    statusField.layer?.add(transition, forKey: "kCATransitionPush")
+    
+    statusField.stringValue = value ? Strings.hiddenFileOff : Strings.hiddenFileOn
+  }
+  
   fileprivate func relaunchFinder() {
     let shell = RNShell(path: Constants.Commands.killallPath)
     shell.run(command: Constants.Commands.finder)
@@ -111,6 +123,7 @@ extension MainViewController: OGSwitchDelegate {
   
   fileprivate func toggleSettings(to value: Bool) {
     if setHiddenFileSettings(value: value) {
+      setStatus(to: value)
       relaunchFinder()
     }
   }
