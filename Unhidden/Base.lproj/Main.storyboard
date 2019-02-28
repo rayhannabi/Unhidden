@@ -163,7 +163,7 @@
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" fullSizeContentView="YES"/>
                         <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES" fullScreenDisallowsTiling="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="691" y="240" width="340" height="530"/>
+                        <rect key="contentRect" x="691" y="240" width="320" height="510"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="Ab1-uG-cim"/>
@@ -182,17 +182,17 @@
             <objects>
                 <viewController title="Unhidden" id="XfG-lQ-9wD" customClass="MainViewController" customModule="Unhidden" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="340" height="530"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="510"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="ultraDark" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="Cs3-Ui-boh">
-                                <rect key="frame" x="0.0" y="0.0" width="340" height="530"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="510"/>
                                 <subviews>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="jRP-XO-0WP">
-                                        <rect key="frame" x="0.0" y="0.0" width="340" height="530"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="510"/>
                                         <subviews>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="0ez-oG-Ayw" customClass="OGSwitch" customModule="Unhidden" customModuleProvider="target">
-                                                <rect key="frame" x="68" y="44" width="204" height="100"/>
+                                                <rect key="frame" x="64" y="44" width="192" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="4jw-Vt-Ig2"/>
                                                 </constraints>
@@ -204,7 +204,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </customView>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="R1D-H8-wip">
-                                                <rect key="frame" x="-2" y="429" width="344" height="37"/>
+                                                <rect key="frame" x="-2" y="409" width="324" height="37"/>
                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" alignment="center" title="U N H I D D E N" id="nPo-yY-Z3s">
                                                     <font key="font" size="30" name="Metropolis-Thin"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -212,19 +212,28 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbi-ke-liW">
-                                                <rect key="frame" x="-2" y="176" width="344" height="19"/>
+                                                <rect key="frame" x="-2" y="176" width="324" height="19"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" allowsUndo="NO" alignment="center" title="Hidden files are not shown" id="hbJ-gh-6Mg">
                                                     <font key="font" size="15" name="Metropolis-Regular"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="9z4-en-u9d">
+                                                <rect key="frame" x="61" y="203" width="198" height="198"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="9z4-en-u9d" secondAttribute="height" multiplier="1:1" id="waL-Mb-YIb"/>
+                                                </constraints>
+                                            </customView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="0ez-oG-Ayw" firstAttribute="centerX" secondItem="jRP-XO-0WP" secondAttribute="centerX" id="0IZ-8P-Av9"/>
                                             <constraint firstItem="R1D-H8-wip" firstAttribute="centerX" secondItem="jRP-XO-0WP" secondAttribute="centerX" id="0ad-6V-Ytw"/>
                                             <constraint firstItem="R1D-H8-wip" firstAttribute="top" secondItem="jRP-XO-0WP" secondAttribute="top" constant="64" id="0nL-4j-gmP"/>
                                             <constraint firstItem="0ez-oG-Ayw" firstAttribute="width" secondItem="jRP-XO-0WP" secondAttribute="width" multiplier="0.6" id="QaG-zO-UfD"/>
+                                            <constraint firstItem="9z4-en-u9d" firstAttribute="top" secondItem="R1D-H8-wip" secondAttribute="bottom" constant="8" id="U3w-go-Vfd"/>
+                                            <constraint firstItem="9z4-en-u9d" firstAttribute="centerX" secondItem="jRP-XO-0WP" secondAttribute="centerX" id="Um0-bO-jsE"/>
+                                            <constraint firstItem="kbi-ke-liW" firstAttribute="top" secondItem="9z4-en-u9d" secondAttribute="bottom" constant="8" id="b40-hc-IZq"/>
                                             <constraint firstAttribute="bottom" secondItem="0ez-oG-Ayw" secondAttribute="bottom" constant="44" id="bva-JB-4Tq"/>
                                             <constraint firstItem="kbi-ke-liW" firstAttribute="leading" secondItem="jRP-XO-0WP" secondAttribute="leading" id="fFE-D1-lZK"/>
                                             <constraint firstAttribute="trailing" secondItem="kbi-ke-liW" secondAttribute="trailing" id="rUx-Ab-9rp"/>
@@ -249,13 +258,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lottieAnimationContainer" destination="9z4-en-u9d" id="oXp-cK-AvH"/>
                         <outlet property="settingsSwitch" destination="0ez-oG-Ayw" id="574-Fm-mz5"/>
                         <outlet property="statusField" destination="kbi-ke-liW" id="EFu-vg-lRj"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="402" y="231"/>
+            <point key="canvasLocation" x="394" y="231"/>
         </scene>
     </scenes>
 </document>

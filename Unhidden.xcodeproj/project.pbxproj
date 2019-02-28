@@ -12,6 +12,7 @@
 		E80D0E971F6DC430006A2A6D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80D0E961F6DC430006A2A6D /* MainViewController.swift */; };
 		E80D0E991F6DC430006A2A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80D0E981F6DC430006A2A6D /* Assets.xcassets */; };
 		E80D0E9C1F6DC430006A2A6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80D0E9A1F6DC430006A2A6D /* Main.storyboard */; };
+		E820FF452228190F008D8282 /* eye.json in Resources */ = {isa = PBXBuildFile; fileRef = E820FF442228190F008D8282 /* eye.json */; };
 		E85A23E71F6DD362006D38BC /* OGSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85A23E61F6DD362006D38BC /* OGSwitch.swift */; };
 		E89997A6221F38BA007D3AB3 /* RNShell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E899979D221F38BA007D3AB3 /* RNShell.framework */; };
 		E89997AD221F38BA007D3AB3 /* RNShellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89997AC221F38BA007D3AB3 /* RNShellTests.swift */; };
@@ -91,6 +92,7 @@
 		E80D0E981F6DC430006A2A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E80D0E9B1F6DC430006A2A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E80D0E9D1F6DC430006A2A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E820FF442228190F008D8282 /* eye.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = eye.json; sourceTree = "<group>"; };
 		E85A23E61F6DD362006D38BC /* OGSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGSwitch.swift; sourceTree = "<group>"; };
 		E899979D221F38BA007D3AB3 /* RNShell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RNShell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E899979F221F38BA007D3AB3 /* RNShell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNShell.h; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 		E8EE9F89222450B50056932A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E820FF442228190F008D8282 /* eye.json */,
 				E8EE9F8A222450C60056932A /* Fonts */,
 			);
 			path = Resources;
@@ -457,6 +460,7 @@
 				E8EE9FC4222451720056932A /* Metropolis-LightItalic.otf in Resources */,
 				E80D0E9C1F6DC430006A2A6D /* Main.storyboard in Resources */,
 				E8EE9FC7222451720056932A /* Metropolis-ExtraBold.otf in Resources */,
+				E820FF452228190F008D8282 /* eye.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
