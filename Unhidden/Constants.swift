@@ -24,3 +24,8 @@ struct Constants {
   }
   
 }
+
+struct Strings {
+  static var hiddenFileOn = "Hidden files are not shown"
+  static var hiddenFileOff = "Hidden files are visible now"
+}

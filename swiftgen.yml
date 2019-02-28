@@ -1,0 +1,5 @@
+fonts:
+  inputs: ./Unhidden/Resources/Fonts/
+  outputs: 
+    templateName: swift4
+    output: ./Unhidden/Generated/Fonts.swift

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -158,11 +159,11 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Unhidden" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingMode="disallowed" id="IQv-IB-iLA">
+                    <window key="window" title="Unhidden" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" animationBehavior="none" tabbingMode="disallowed" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" fullSizeContentView="YES"/>
                         <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES" fullScreenDisallowsTiling="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="392" height="525"/>
+                        <rect key="contentRect" x="691" y="240" width="340" height="530"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="Ab1-uG-cim"/>
@@ -181,110 +182,80 @@
             <objects>
                 <viewController title="Unhidden" id="XfG-lQ-9wD" customClass="MainViewController" customModule="Unhidden" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="291" height="464"/>
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="530"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="ultraDark" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="Mdr-fI-xFp">
-                                <rect key="frame" x="0.0" y="354" width="291" height="110"/>
-                            </visualEffectView>
                             <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="ultraDark" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="Cs3-Ui-boh">
-                                <rect key="frame" x="0.0" y="0.0" width="291" height="362"/>
-                            </visualEffectView>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="jRP-XO-0WP">
-                                <rect key="frame" x="0.0" y="0.0" width="291" height="464"/>
+                                <rect key="frame" x="0.0" y="0.0" width="340" height="530"/>
                                 <subviews>
-                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="0ez-oG-Ayw" customClass="OGSwitch" customModule="Unhidden" customModuleProvider="target">
-                                        <rect key="frame" x="44" y="44" width="203" height="84"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="84" id="v0F-DM-WEa"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ignoreRatio" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
-                                                <color key="value" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </customView>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CXk-lN-tCe">
-                                        <rect key="frame" x="54" y="152" width="184" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="C1R-kD-xWz"/>
-                                        </constraints>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Toggle to show hidden files" id="0ux-1Q-CxS">
-                                            <font key="font" size="14" name="AvenirNext-Regular"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tGT-oX-Nc2">
-                                        <rect key="frame" x="68" y="198" width="155" height="29"/>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="jRP-XO-0WP">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="530"/>
                                         <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Lf8-GW-78H">
-                                                <rect key="frame" x="-2" y="0.0" width="123" height="29"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Current Status:" id="FCz-vs-tad">
-                                                    <font key="font" size="17" name="AvenirNext-Regular"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="0ez-oG-Ayw" customClass="OGSwitch" customModule="Unhidden" customModuleProvider="target">
+                                                <rect key="frame" x="68" y="44" width="204" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="4jw-Vt-Ig2"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="ignoreRatio" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
+                                                        <color key="value" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </customView>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="R1D-H8-wip">
+                                                <rect key="frame" x="-2" y="429" width="344" height="37"/>
+                                                <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" alignment="center" title="U N H I D D E N" id="nPo-yY-Z3s">
+                                                    <font key="font" size="30" name="Metropolis-Thin"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKB-aS-ZCB">
-                                                <rect key="frame" x="117" y="0.0" width="40" height="29"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="N/A" id="jX2-R0-fPE">
-                                                    <font key="font" size="17" name="AvenirNext-DemiBold"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbi-ke-liW">
+                                                <rect key="frame" x="-2" y="176" width="344" height="19"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" allowsUndo="NO" alignment="center" title="Hidden files are not shown" id="hbJ-gh-6Mg">
+                                                    <font key="font" size="15" name="Metropolis-Regular"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                         </subviews>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
+                                        <constraints>
+                                            <constraint firstItem="0ez-oG-Ayw" firstAttribute="centerX" secondItem="jRP-XO-0WP" secondAttribute="centerX" id="0IZ-8P-Av9"/>
+                                            <constraint firstItem="R1D-H8-wip" firstAttribute="centerX" secondItem="jRP-XO-0WP" secondAttribute="centerX" id="0ad-6V-Ytw"/>
+                                            <constraint firstItem="R1D-H8-wip" firstAttribute="top" secondItem="jRP-XO-0WP" secondAttribute="top" constant="64" id="0nL-4j-gmP"/>
+                                            <constraint firstItem="0ez-oG-Ayw" firstAttribute="width" secondItem="jRP-XO-0WP" secondAttribute="width" multiplier="0.6" id="QaG-zO-UfD"/>
+                                            <constraint firstAttribute="bottom" secondItem="0ez-oG-Ayw" secondAttribute="bottom" constant="44" id="bva-JB-4Tq"/>
+                                            <constraint firstItem="kbi-ke-liW" firstAttribute="leading" secondItem="jRP-XO-0WP" secondAttribute="leading" id="fFE-D1-lZK"/>
+                                            <constraint firstAttribute="trailing" secondItem="kbi-ke-liW" secondAttribute="trailing" id="rUx-Ab-9rp"/>
+                                            <constraint firstItem="0ez-oG-Ayw" firstAttribute="top" secondItem="kbi-ke-liW" secondAttribute="bottom" constant="32" id="xCX-IE-zNG"/>
+                                            <constraint firstItem="R1D-H8-wip" firstAttribute="width" secondItem="jRP-XO-0WP" secondAttribute="width" id="y4m-jd-SDy"/>
+                                        </constraints>
+                                    </customView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="0ez-oG-Ayw" firstAttribute="centerX" secondItem="jRP-XO-0WP" secondAttribute="centerX" id="8u9-ty-V0E"/>
-                                    <constraint firstItem="CXk-lN-tCe" firstAttribute="top" secondItem="tGT-oX-Nc2" secondAttribute="bottom" constant="16" id="Fhk-r4-m4B"/>
-                                    <constraint firstItem="CXk-lN-tCe" firstAttribute="centerX" secondItem="0ez-oG-Ayw" secondAttribute="centerX" id="QYG-yT-Ofo"/>
-                                    <constraint firstItem="0ez-oG-Ayw" firstAttribute="width" secondItem="jRP-XO-0WP" secondAttribute="width" multiplier="0.7" id="VLV-Nc-yta"/>
-                                    <constraint firstItem="tGT-oX-Nc2" firstAttribute="centerX" secondItem="CXk-lN-tCe" secondAttribute="centerX" id="a3O-RL-q2n"/>
-                                    <constraint firstAttribute="bottom" secondItem="0ez-oG-Ayw" secondAttribute="bottom" constant="44" id="i0O-4l-Zbb"/>
-                                    <constraint firstItem="0ez-oG-Ayw" firstAttribute="top" secondItem="CXk-lN-tCe" secondAttribute="bottom" constant="24" id="oiB-d1-iH3"/>
+                                    <constraint firstItem="jRP-XO-0WP" firstAttribute="top" secondItem="Cs3-Ui-boh" secondAttribute="top" id="Kd8-xi-2Qv"/>
+                                    <constraint firstAttribute="bottom" secondItem="jRP-XO-0WP" secondAttribute="bottom" id="N2b-6y-w8g"/>
+                                    <constraint firstItem="jRP-XO-0WP" firstAttribute="leading" secondItem="Cs3-Ui-boh" secondAttribute="leading" id="bYS-QD-ILQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="jRP-XO-0WP" secondAttribute="trailing" id="oC2-xK-Dhn"/>
                                 </constraints>
-                            </customView>
+                            </visualEffectView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="jRP-XO-0WP" secondAttribute="bottom" id="2Sz-Oh-aWu"/>
-                            <constraint firstItem="jRP-XO-0WP" firstAttribute="bottom" secondItem="Cs3-Ui-boh" secondAttribute="bottom" id="3uO-wk-tuw"/>
-                            <constraint firstItem="jRP-XO-0WP" firstAttribute="top" secondItem="Mdr-fI-xFp" secondAttribute="top" id="BhU-EP-Kbd"/>
-                            <constraint firstItem="Mdr-fI-xFp" firstAttribute="leading" secondItem="Cs3-Ui-boh" secondAttribute="leading" id="JVb-GA-Ypw"/>
-                            <constraint firstItem="Mdr-fI-xFp" firstAttribute="trailing" secondItem="Cs3-Ui-boh" secondAttribute="trailing" id="Nkk-8m-8sk"/>
-                            <constraint firstAttribute="trailing" secondItem="Mdr-fI-xFp" secondAttribute="trailing" id="OlO-bH-KpY"/>
-                            <constraint firstItem="Mdr-fI-xFp" firstAttribute="trailing" secondItem="jRP-XO-0WP" secondAttribute="trailing" id="RqW-tA-NQw"/>
-                            <constraint firstItem="Cs3-Ui-boh" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="102" id="TWX-zF-wav"/>
-                            <constraint firstItem="Mdr-fI-xFp" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="XJt-5O-Nci"/>
-                            <constraint firstItem="Mdr-fI-xFp" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="h1J-cd-jOn"/>
-                            <constraint firstItem="Mdr-fI-xFp" firstAttribute="leading" secondItem="jRP-XO-0WP" secondAttribute="leading" id="mKe-iH-NL2"/>
-                            <constraint firstAttribute="bottom" secondItem="Mdr-fI-xFp" secondAttribute="bottom" constant="354" id="uld-Ut-yGv"/>
+                            <constraint firstItem="Cs3-Ui-boh" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="TWX-zF-wav"/>
+                            <constraint firstAttribute="bottom" secondItem="Cs3-Ui-boh" secondAttribute="bottom" id="XDv-cI-mB9"/>
+                            <constraint firstItem="Cs3-Ui-boh" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="lY4-FW-8Ss"/>
+                            <constraint firstAttribute="trailing" secondItem="Cs3-Ui-boh" secondAttribute="trailing" id="qzo-cV-hyw"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="lblStatus" destination="PKB-aS-ZCB" id="RYH-fW-xD3"/>
-                        <outlet property="toggleButton" destination="0ez-oG-Ayw" id="574-Fm-mz5"/>
+                        <outlet property="settingsSwitch" destination="0ez-oG-Ayw" id="574-Fm-mz5"/>
+                        <outlet property="statusField" destination="kbi-ke-liW" id="EFu-vg-lRj"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <textFieldCell scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Unhidden" id="2s4-4t-ogl">
-                    <font key="font" size="30" name="Avenir-Medium"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                </textFieldCell>
             </objects>
-            <point key="canvasLocation" x="424" y="480"/>
+            <point key="canvasLocation" x="402" y="231"/>
         </scene>
     </scenes>
 </document>
