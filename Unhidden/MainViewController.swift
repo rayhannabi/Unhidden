@@ -55,10 +55,10 @@ class MainViewController: NSViewController {
     switch state {
     case .on:
       settingsSwitch.setOn(isOn: true, animated: true)
-      statusField.stringValue = Constants.Strings.hiddenFileOn.rawValue
+      statusField.stringValue = Strings.hiddenFileOn
     case .off:
       settingsSwitch.setOn(isOn: false, animated: true)
-      statusField.stringValue = Constants.Strings.hiddenFileOff.rawValue
+      statusField.stringValue = Strings.hiddenFileOff
     }
   }
   

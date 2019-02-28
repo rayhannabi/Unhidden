@@ -212,9 +212,9 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kbi-ke-liW">
-                                                <rect key="frame" x="79" y="176" width="183" height="18"/>
+                                                <rect key="frame" x="73" y="176" width="195" height="19"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Hidden files are not shown" id="hbJ-gh-6Mg">
-                                                    <font key="font" size="14" name="Metropolis-Regular"/>
+                                                    <font key="font" size="15" name="Metropolis-Regular"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
